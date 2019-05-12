@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../../models/message.interface';
 import { ChatService } from '../../servicies/chat.service';
+import { User } from '../../models/user.interface';
 
 @Component({
   selector: 'app-message-list',
@@ -9,6 +10,7 @@ import { ChatService } from '../../servicies/chat.service';
 })
 export class MessageListComponent implements OnInit {
   public messages: Message[] = [];
+  public users: User[] = [];
   constructor(private chat: ChatService) {}
 
   ngOnInit() {
